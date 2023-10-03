@@ -50,8 +50,10 @@ const Publish = ({ token }) => {
     <div className="publish-container">
       <form className="publish-form" onSubmit={handleSubmit}>
         <h1>Vends ton article</h1>
-        <div className="publish-style">
-          <label htmlFor="filePict">Choisissez votre image</label>
+        <div className="publish-style publish-img">
+          <label htmlFor="filePict">
+            <span>+</span>Ajoutez une photo
+          </label>
           <input //cacher avec un display none
             id="filePict"
             type="file"

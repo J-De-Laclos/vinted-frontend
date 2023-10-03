@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/logovinted.png";
 
 const Header = ({ handleToken, token, search, setSearch }) => {
   return (
     <header>
       <Link to="/">
-        <img src="src/assets/logovinted.png" alt="logo vinted" />
+        <img src={logo} alt="logo vinted" />
       </Link>
       <input
+        className="searchBar"
         type="text"
         value={search}
         placeholder="Rechercher des articles"
@@ -14,9 +16,9 @@ const Header = ({ handleToken, token, search, setSearch }) => {
           setSearch(event.target.value);
         }}
       />
-      <div>
+      <div className="align-button">
         {!token ? (
-          <div>
+          <div className="signup-login">
             <Link to="/signup">
               <button>S'inscrire</button>
             </Link>

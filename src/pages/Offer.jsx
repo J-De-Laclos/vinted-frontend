@@ -29,13 +29,13 @@ const Offer = ({ token }) => {
     <p>Loading...</p>
   ) : (
     <div className="offer-container">
-      <h2 className="offer-title">{data.product_name}</h2>
       <img
         src={data.product_image.secure_url}
         alt="clothe"
         className="offer-image"
       />
       <div className="offer-details">
+        <p className="offer-price">{data.product_price} €</p>
         {data.product_details.map((detail, index) => {
           const keyName = Object.keys(detail);
           // console.log(keyName[0]);
@@ -46,10 +46,12 @@ const Offer = ({ token }) => {
             </div>
           );
         })}
+        <h2 className="offer-title">{data.product_name}</h2>
+
+        <Link to={token ? "/payment" : "/login"} className="offer-buy">
+          Acheter
+        </Link>
       </div>
-      <Link to={token ? "/payment" : "/login"} className="offer-buy">
-        Acheter
-      </Link>
     </div>
   );
 };
