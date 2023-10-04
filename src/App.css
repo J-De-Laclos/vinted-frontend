@@ -263,6 +263,7 @@ header button {
   margin-bottom: 15px;
   padding: 8px;
   font-size: 16px;
+  outline: none;
 }
 
 .checkbox {
@@ -326,7 +327,7 @@ header button {
 /*-------------------*/
 .publish-container {
   background-color: rgb(247, 247, 247);
-  height: 100vh;
+  height: 100%;
 }
 
 .publish-form {
@@ -345,8 +346,90 @@ header button {
   width: 90%;
   height: 200px;
   background-color: white;
-  border: 2px solid lightgray;
   margin-bottom: 10px;
+}
+
+.publish-style-brand {
+  margin: 0 auto;
+  width: 90%;
+  height: 600px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.publish-style-in-box {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: #ededed 1px solid;
+}
+
+.publish-style-in-box-brand {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: #ededed 1px solid;
+}
+
+.publish-style-in-box p {
+  font-size: 16px;
+  line-height: 13px;
+}
+
+.publish-style-in-box input {
+  width: 30%;
+  border: none;
+  border-bottom: #ededed 1px solid;
+  outline: none;
+}
+
+.publish-style-in-box input[type="number"] {
+  -ms-progress-appearance: ring;
+}
+
+.publish-style-in-box input:focus {
+  border-bottom: #2cb1ba 1px solid;
+}
+
+.publish-style-in-box-brand input {
+  width: 30%;
+  border: none;
+  border-bottom: #ededed 1px solid;
+  outline: none;
+}
+
+.publish-style-in-box-brand input:focus {
+  border-bottom: #2cb1ba 1px solid;
+}
+
+.publish-style-in-box input::placeholder {
+  color: #d8d9da;
+}
+
+.publish-style-in-box-brand input::placeholder {
+  color: #d8d9da;
+}
+
+.publish-style-in-box textarea {
+  width: 30%;
+  border: none;
+  border-bottom: #ededed 1px solid;
+  outline: none;
+  resize: none;
+}
+
+.publish-style-in-box textarea::placeholder {
+  color: #d8d9da;
+}
+
+.publish-style-in-box textarea:focus {
+  border-bottom: #2cb1ba 1px solid;
 }
 
 .publish-img {

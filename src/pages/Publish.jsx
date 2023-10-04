@@ -40,6 +40,7 @@ const Publish = ({ token }) => {
         }
       );
       console.log(response.data);
+      alert("Votre article a bien été ajouté");
       navigate("/");
     } catch (error) {
       console.log(error.message);
@@ -64,64 +65,89 @@ const Publish = ({ token }) => {
           {picture && <img src={URL.createObjectURL(picture)} />}
         </div>
         <div className="publish-style">
-          <input
-            type="text"
-            placeholder="titre"
-            onChange={(event) => {
-              setTitle(event.target.value);
-            }}
-          />
-          <textarea
-            onChange={(event) => {
-              setDescription(event.target.value);
-            }}
-          ></textarea>
+          <div className="publish-style-in-box">
+            <p>Titre</p>
+            <input
+              type="text"
+              placeholder="ex: Polo Ralph Lauren bleu"
+              onChange={(event) => {
+                setTitle(event.target.value);
+              }}
+            />
+          </div>
+          <div className="publish-style-in-box">
+            <p>Décris ton article</p>
+            <textarea
+              placeholder="ex: Porté quelques fois; Taille bien etc..."
+              onChange={(event) => {
+                setDescription(event.target.value);
+              }}
+            ></textarea>
+          </div>
+        </div>
+        <div className="publish-style-brand">
+          <div className="publish-style-in-box-brand">
+            <p>Marque</p>
+            <input
+              type="text"
+              placeholder="ex: Adidas, Zara, Vet'affair..."
+              onChange={(event) => {
+                setBrand(event.target.value);
+              }}
+            />
+          </div>
+          <div className="publish-style-in-box-brand">
+            <p>Taille</p>
+            <input
+              type="text"
+              placeholder="ex: M / L / 42 / 44 "
+              onChange={(event) => {
+                setSize(event.target.value);
+              }}
+            />
+          </div>
+          <div className="publish-style-in-box-brand">
+            <p>Couleur</p>
+            <input
+              type="text"
+              placeholder="ex: Rouge, Bleu, Canari..."
+              onChange={(event) => {
+                setColor(event.target.value);
+              }}
+            />
+          </div>
+          <div className="publish-style-in-box-brand">
+            <p>Etat</p>
+            <input
+              type="text"
+              placeholder="ex: Très bon état, état correct..."
+              onChange={(event) => {
+                setCondition(event.target.value);
+              }}
+            />
+          </div>
+          <div className="publish-style-in-box-brand">
+            <p>Lieu</p>
+            <input
+              type="text"
+              placeholder="ex: Paris, Nantes, Trappes..."
+              onChange={(event) => {
+                setCity(event.target.value);
+              }}
+            />
+          </div>
         </div>
         <div className="publish-style">
-          <input
-            type="text"
-            placeholder="marque"
-            onChange={(event) => {
-              setBrand(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Taille"
-            onChange={(event) => {
-              setSize(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="couleur"
-            onChange={(event) => {
-              setColor(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Etat"
-            onChange={(event) => {
-              setCondition(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Lieu"
-            onChange={(event) => {
-              setCity(event.target.value);
-            }}
-          />
-        </div>
-        <div className="publish-style">
-          <input
-            type="number"
-            placeholder="prix"
-            onChange={(event) => {
-              setPrice(event.target.value);
-            }}
-          />
+          <div className="publish-style-in-box">
+            <p>Prix</p>
+            <input
+              type="number"
+              placeholder="0,00 €"
+              onChange={(event) => {
+                setPrice(event.target.value);
+              }}
+            />
+          </div>
         </div>
         <div className="pub-contain">
           <input type="submit" value="Ajouter" className="add-button" />
