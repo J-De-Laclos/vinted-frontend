@@ -325,6 +325,7 @@ header button {
 /*-------------------*/
 /*-------PUBLISH-------*/
 /*-------------------*/
+
 .publish-container {
   background-color: rgb(247, 247, 247);
   height: 100%;
@@ -469,4 +470,15 @@ header button {
 .pub-contain {
   display: flex;
   justify-content: flex-end;
+}
+
+/*-------------------*/
+/*-------LOADER-------*/
+/*-------------------*/
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }

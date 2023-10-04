@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Banniere from "../components/Banniere";
+import { Circles as Loader } from "react-loader-spinner";
 
 const Home = ({ search }) => {
   const [data, setData] = useState({});
@@ -24,7 +25,9 @@ const Home = ({ search }) => {
   }, [search]);
 
   return isLoading ? (
-    <p>Loading...</p>
+    <div className="loader">
+      <Loader color="#2CB1BA" height={80} width={80} />
+    </div>
   ) : (
     <>
       <div>

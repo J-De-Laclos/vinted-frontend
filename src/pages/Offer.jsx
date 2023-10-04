@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import { Circles as Loader } from "react-loader-spinner";
 
 const Offer = ({ token }) => {
   const [data, setData] = useState({});
@@ -26,7 +27,9 @@ const Offer = ({ token }) => {
   }, [id]);
 
   return isLoading ? (
-    <p>Loading...</p>
+    <div className="loader">
+      <Loader color="#2CB1BA" height={80} width={80} />
+    </div>
   ) : (
     <div className="offer-container">
       <img
