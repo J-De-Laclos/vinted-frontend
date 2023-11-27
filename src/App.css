@@ -1,64 +1,20 @@
+@font-face {
+  font-family: "Maison-Neue";
+  src: url("./fonts/FontsFree-Net-Maison-Neue-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Maison-Neue";
+  src: url("./fonts/FontsFree-Net-Maison-Neue-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*GENERAL*/
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Maison-Neue", sans-serif;
   box-sizing: border-box;
-}
-
-/*HEADER*/
-
-header {
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header img {
-  width: 140px;
-  margin-left: 20px;
-}
-
-header button {
-  color: #2cb1ba;
-  height: 29px;
-  width: 115px;
-  font-size: 12px;
-  border: 1px solid #2cb1ba;
-  background-color: white;
-  border-radius: 5px;
-  margin-left: 19px;
-}
-
-.sell-items-button {
-  color: white;
-  font-size: 13px;
-  background-color: #2cb1ba;
-  margin-right: 38px;
-  margin-left: 59px;
-  padding: 8px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.align-button {
-  display: flex;
-}
-
-.signup-login {
-  display: flex;
-  flex-direction: row;
-}
-
-.searchBar {
-  width: 40%;
-  height: 25%;
-  border: none;
-  background-color: #f5f6f7;
-  border-radius: 5px;
-  outline: none;
-}
-.searchBar::placeholder {
-  color: #d8d9da;
 }
 
 /*-------------------*/
@@ -85,22 +41,25 @@ header button {
 }
 
 .block-into-banniere {
+  font-family: "Maison-Neue", sans-serif;
+  font-weight: bold;
   position: absolute;
   height: 270px;
   width: 380px;
   top: 20%;
   left: 5%;
   background-color: white;
-  font-size: 36px;
+  font-size: 34px;
   line-height: 42px;
   padding: 30px;
-  font-weight: bold;
+  border-radius: 3px;
+  font-weight: normal;
 }
 
 .btn-in-banniere {
   width: 100%;
   height: 40px;
-  background-color: #2cb1ba;
+  background-color: #017580;
   border: none;
   color: #fafafa;
   font-size: 16px;
@@ -108,6 +67,7 @@ header button {
   margin-top: 50px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Maison-Neue", sans-serif;
 }
 /*-------------------*/
 /*-------HOME-------*/
@@ -227,7 +187,7 @@ header button {
   border-bottom: 1px solid #ededed;
 }
 .offer-buy {
-  background-color: #2cb1ba;
+  background-color: #017580;
   color: white;
   text-align: center;
   border: none;
@@ -298,7 +258,7 @@ header button {
 
 .signup-button {
   width: 100%;
-  background-color: #2cb1ba;
+  background-color: #017580;
   color: white;
   border: none;
   padding: 10px;
@@ -311,7 +271,7 @@ header button {
   /* border: 2px solid red; */
   text-align: center;
   font-size: 12px;
-  color: #2cb1ba;
+  color: #017580;
   margin-top: 10px;
   text-decoration: none;
   margin-bottom: 150px;
@@ -395,7 +355,7 @@ header button {
 }
 
 .publish-style-in-box input:focus {
-  border-bottom: #2cb1ba 1px solid;
+  border-bottom: #017580 1px solid;
 }
 
 .publish-style-in-box-brand input {
@@ -406,7 +366,7 @@ header button {
 }
 
 .publish-style-in-box-brand input:focus {
-  border-bottom: #2cb1ba 1px solid;
+  border-bottom: #017580 1px solid;
 }
 
 .publish-style-in-box input::placeholder {
@@ -430,7 +390,7 @@ header button {
 }
 
 .publish-style-in-box textarea:focus {
-  border-bottom: #2cb1ba 1px solid;
+  border-bottom: #017580 1px solid;
 }
 
 .publish-img {
@@ -444,7 +404,7 @@ header button {
 }
 .publish-img label {
   font-size: 30px;
-  color: #2cb1ba;
+  color: #017580;
   border: 2px #ededed dashed;
   padding: 50px 100px;
   cursor: pointer;
@@ -455,7 +415,7 @@ header button {
 }
 
 .add-button {
-  background-color: #2cb1ba;
+  background-color: #017580;
   color: white;
   border: none;
   padding: 10px;

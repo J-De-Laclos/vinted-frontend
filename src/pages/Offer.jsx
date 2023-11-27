@@ -28,7 +28,7 @@ const Offer = ({ token }) => {
 
   return isLoading ? (
     <div className="loader">
-      <Loader color="#2CB1BA" height={80} width={80} />
+      <Loader color="#017580" height={80} width={80} />
     </div>
   ) : (
     <div className="offer-container">

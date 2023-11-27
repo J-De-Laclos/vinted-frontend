@@ -1,0 +1,129 @@
+/*HEADER*/
+
+header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 75px;
+  margin-left: 20px;
+  margin-right: 45px;
+}
+
+header button {
+  color: #017580;
+  height: 29px;
+  width: 115px;
+  font-size: 12px;
+  border: 1px solid #017580;
+  background-color: white;
+  border-radius: 3px;
+  margin-left: 10px;
+  font-family: "Maison-Neue", sans-serif;
+  cursor: pointer;
+}
+
+.sell-items-button {
+  font-family: "Maison-Neue", sans-serif;
+  color: white;
+  font-size: 12px;
+  width: 110px;
+  height: 29px;
+  background-color: #017580;
+  margin-right: 38px;
+  margin-left: 10px;
+  text-align: center;
+  padding-top: 8px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.align-button {
+  display: flex;
+}
+
+.signup-login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchBar {
+  width: 40%;
+  height: 70%;
+  padding-left: 10px;
+  border: none;
+  background-color: #f5f6f7;
+  border-radius: 5px;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+}
+.searchBar input::placeholder {
+  color: #787878;
+  font-family: "Maison-Neue", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.icone {
+  font-size: 15px;
+}
+.searchBar input {
+  width: 93%;
+  border: none;
+  background-color: #f5f6f7;
+  outline: none;
+}
+
+@media (max-width: 978px) {
+  header {
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header img {
+    width: 75px;
+    margin-left: 20px;
+    margin-right: 45px;
+  }
+
+  .bars {
+    font-size: 25px;
+    margin-right: 15px;
+  }
+
+  .icone {
+    border: 1px solid orange;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+  .searchBar input::placeholder {
+    border: 1px solid orange;
+    color: #787878;
+    font-family: "Maison-Neue", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .searchBar {
+    border: 1px solid orange;
+    height: 40px;
+    width: 97%;
+    margin: 8px;
+  }
+
+  header button,
+  .sell-items-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

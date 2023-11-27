@@ -13,14 +13,16 @@ const Banniere = () => {
 
       <img className="tear-effect" src={tear} alt="tear effect" />
       <div className="block-into-banniere">
-        Prêts à faire du tri dans vos placards ?
+        Prêts à faire
+        <br /> du tri dans vos
+        <br /> placards ?
         <button
           className="btn-in-banniere"
           onClick={() => {
             navigate("/publish");
           }}
         >
-          Commencer à vendre
+          Vends maintenant
         </button>
       </div>
     </div>

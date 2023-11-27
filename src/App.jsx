@@ -2,6 +2,14 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Cookies from "js-cookie";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faSearch,
+  faCheck,
+  faRedo,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faSearch, faCheck, faRedo, faBars);
 //Pages
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";
