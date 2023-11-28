@@ -8,8 +8,9 @@ import {
   faCheck,
   faRedo,
   faBars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faSearch, faCheck, faRedo, faBars);
+library.add(faSearch, faCheck, faRedo, faBars, faXmark);
 //Pages
 import Home from "./pages/Home";
 import Offer from "./pages/Offer";

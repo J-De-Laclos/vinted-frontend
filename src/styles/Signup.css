@@ -1,0 +1,80 @@
+/*-------------------*/
+/*-------SIGNUP-------*/
+/*-------------------*/
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+  margin: auto;
+  height: 70vh;
+  /* border: 2px solid green; */
+}
+
+.signup-container input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(240, 128, 128, 0.6);
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.checkbox {
+  display: flex;
+  /* align-items: center; */
+  margin-bottom: 15px;
+}
+
+.signup-checkbox {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.signup-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-terms {
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.signup-button {
+  width: 100%;
+  background-color: #017580;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.link-to-login {
+  /* border: 2px solid red; */
+  text-align: center;
+  font-size: 12px;
+  color: #017580;
+  margin-top: 10px;
+  text-decoration: none;
+  margin-bottom: 150px;
+}
+
+.signup-input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0.6;
+}
