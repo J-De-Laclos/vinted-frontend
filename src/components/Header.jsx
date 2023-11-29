@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/New_vinted_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/Header.css";
+
 const Header = ({ handleToken, token, search, setSearch }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,6 +21,9 @@ const Header = ({ handleToken, token, search, setSearch }) => {
     };
   }, []);
 
+  const isLoginPage = location.pathname === "/login";
+  const isSignupPage = location.pathname === "/signup";
+
   return (
     <>
       {isMobile ? (
@@ -27,7 +32,6 @@ const Header = ({ handleToken, token, search, setSearch }) => {
             <Link to="/">
               <img src={logo} alt="logo vinted" />
             </Link>
-
             {showMenu ? (
               <FontAwesomeIcon
                 className="bars"
@@ -59,7 +63,7 @@ const Header = ({ handleToken, token, search, setSearch }) => {
               >
                 Vends tes articles
               </Link>
-              {!token ? (
+              {!token && !isLoginPage && !isSignupPage ? (
                 <div className="signup-login">
                   <Link
                     to="/signup"
@@ -81,17 +85,45 @@ const Header = ({ handleToken, token, search, setSearch }) => {
                   </Link>
                 </div>
               ) : (
-                <button
-                  className="deconnexion-button"
-                  onClick={() => {
-                    handleToken(null);
-                  }}
-                >
-                  Déconnexion
-                </button>
+                token && (
+                  <button
+                    className="deconnexion-button"
+                    onClick={() => {
+                      handleToken(null);
+                    }}
+                  >
+                    Déconnexion
+                  </button>
+                )
               )}
             </div>
           ) : (
+            !isLoginPage &&
+            !isSignupPage && (
+              <div className="searchBar">
+                <FontAwesomeIcon
+                  className="icone"
+                  icon="fa-solid fa-magnifying-glass"
+                  style={{ color: "#999999" }}
+                />
+                <input
+                  type="text"
+                  value={search}
+                  placeholder=" Rechercher des articles"
+                  onChange={(event) => {
+                    setSearch(event.target.value);
+                  }}
+                />
+              </div>
+            )
+          )}
+        </section>
+      ) : (
+        <header>
+          <Link to="/">
+            <img src={logo} alt="logo vinted" />
+          </Link>
+          {!isLoginPage && !isSignupPage && (
             <div className="searchBar">
               <FontAwesomeIcon
                 className="icone"
@@ -108,27 +140,6 @@ const Header = ({ handleToken, token, search, setSearch }) => {
               />
             </div>
           )}
-        </section>
-      ) : (
-        <header>
-          <Link to="/">
-            <img src={logo} alt="logo vinted" />
-          </Link>
-          <div className="searchBar">
-            <FontAwesomeIcon
-              className="icone"
-              icon="fa-solid fa-magnifying-glass"
-              style={{ color: "#999999" }}
-            />
-            <input
-              type="text"
-              value={search}
-              placeholder=" Rechercher des articles"
-              onChange={(event) => {
-                setSearch(event.target.value);
-              }}
-            />
-          </div>
           <div className="align-button">
             {!token ? (
               <div className="signup-login">

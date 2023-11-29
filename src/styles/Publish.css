@@ -1,0 +1,173 @@
+/*-------------------*/
+/*-------PUBLISH-------*/
+/*-------------------*/
+
+.publish-container {
+  background-color: rgb(247, 247, 247);
+  height: 100%;
+}
+
+.publish-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.publish-form h1 {
+  margin-top: 30px;
+  margin-left: 5%;
+  font-family: "Maison-Neue", sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.publish-style {
+  margin: 0 auto;
+  width: 90%;
+  height: 200px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.publish-style-brand {
+  margin: 0 auto;
+  width: 90%;
+  height: 600px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.publish-style-in-box {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: #ededed 1px solid;
+}
+
+.publish-style-in-box-brand {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: #ededed 1px solid;
+}
+
+.publish-style-in-box p {
+  font-family: "Maison-Neue", sans-serif;
+  font-size: 16px;
+  line-height: 13px;
+}
+
+.publish-style-in-box input {
+  font-family: "Maison-Neue", sans-serif;
+  width: 30%;
+  border: none;
+  border-bottom: #ededed 1px solid;
+  outline: none;
+}
+
+.publish-style-in-box input[type="number"] {
+  -ms-progress-appearance: ring;
+}
+
+.publish-style-in-box input:focus {
+  border-bottom: #017580 1px solid;
+}
+
+.publish-style-in-box-brand input {
+  width: 30%;
+  border: none;
+  border-bottom: #ededed 1px solid;
+  outline: none;
+}
+
+.publish-style-in-box-brand input:focus {
+  border-bottom: #017580 1px solid;
+}
+
+.publish-style-in-box input::placeholder {
+  color: #d8d9da;
+}
+
+.publish-style-in-box-brand input::placeholder {
+  color: #d8d9da;
+}
+
+.publish-style-in-box textarea {
+  width: 30%;
+  border: none;
+  border-bottom: #ededed 1px solid;
+  outline: none;
+  resize: none;
+}
+
+.publish-style-in-box textarea::placeholder {
+  color: #d8d9da;
+}
+
+.publish-style-in-box textarea:focus {
+  border-bottom: #017580 1px solid;
+}
+
+.publish-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publish-img input {
+  display: none;
+}
+.publish-img label {
+  font-size: 30px;
+  font-family: "Maison-Neue", sans-serif;
+  color: #017580;
+  border: 2px #ededed dashed;
+  padding: 50px 80px;
+  cursor: pointer;
+}
+.publish-img span {
+  font-size: 30px;
+  font-family: "Maison-Neue", sans-serif;
+  margin-right: 15px;
+}
+
+.add-button {
+  background-color: #017580;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Maison-Neue", sans-serif;
+  border-radius: 6px;
+  width: 100px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.pub-contain {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 978px) {
+  .add-button {
+    background-color: #017580;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Maison-Neue", sans-serif;
+    border-radius: 6px;
+    width: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+  }
+}

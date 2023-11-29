@@ -25,28 +25,33 @@
 
 .checkbox {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   margin-bottom: 15px;
 }
 
 .signup-checkbox {
-  margin-right: 10px;
+  margin-right: 0px;
   width: 20px;
   height: 20px;
 }
 
 .checkbox span {
+  font-family: "Maison-Neue", sans-serif;
+  margin-left: -25%;
   font-size: 14px;
   opacity: 0.8;
 }
 
 .signup-title {
+  font-family: "Maison-Neue", sans-serif;
+  margin-top: 30px;
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .signup-terms {
+  font-family: "Maison-Neue", sans-serif;
   font-size: 12px;
   margin-top: 10px;
   text-align: justify;
@@ -60,6 +65,7 @@
   border: none;
   padding: 10px;
   font-size: 16px;
+  font-family: "Maison-Neue", sans-serif;
   cursor: pointer;
   border-radius: 6px;
 }
@@ -68,6 +74,7 @@
   /* border: 2px solid red; */
   text-align: center;
   font-size: 12px;
+  font-family: "Maison-Neue", sans-serif;
   color: #017580;
   margin-top: 10px;
   text-decoration: none;

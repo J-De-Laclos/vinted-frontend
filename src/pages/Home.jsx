@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Banniere from "../components/Banniere";
 import { Circles as Loader } from "react-loader-spinner";
+import "../styles/Home.css";
 
 const Home = ({ search }) => {
   const [data, setData] = useState({});
@@ -41,16 +42,19 @@ const Home = ({ search }) => {
               to={`/offer/${offer._id}`}
               className="home-details"
             >
-              {offer.owner.account.avatar && (
-                <img
-                  className="profil-image"
-                  src={offer.owner.account.avatar.secure_url}
-                  alt="profil"
-                />
-              )}
-              <span className="home-username">
-                {offer.owner.account.username}
-              </span>
+              <div className="user-profil">
+                {offer.owner.account.avatar && (
+                  <img
+                    className="profil-image"
+                    src={offer.owner.account.avatar.secure_url}
+                    alt="profil"
+                  />
+                )}
+                <span className="home-username">
+                  {offer.owner.account.username}
+                </span>
+              </div>
+
               <div>
                 <img
                   className="home-image"

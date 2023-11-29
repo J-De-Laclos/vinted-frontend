@@ -1,0 +1,59 @@
+/*-------------------*/
+/*-------HOME-------*/
+/*-------------------*/
+
+.profil-image {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.home-image {
+  width: 230px;
+  height: 350px;
+  object-fit: cover;
+  margin-top: 8px;
+}
+.user-profil {
+  display: flex;
+  align-items: center;
+}
+
+.home-username {
+  color: #757575;
+  font-size: 14px;
+  font-family: "Maison-Neue", sans-serif;
+}
+
+.price {
+  margin-left: 10px;
+  font-weight: normal;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #171717;
+  font-family: "Maison-Neue", sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.home-brand {
+  margin-left: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Maison-Neue", sans-serif;
+  color: #757575;
+}
+
+.home-details {
+  text-decoration: none;
+  color: black;
+}
