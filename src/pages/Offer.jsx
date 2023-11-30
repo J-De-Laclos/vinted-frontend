@@ -9,6 +9,7 @@ const Offer = ({ token }) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [isImageExpanded, setIsImageExpanded] = useState(false);
   const { id } = useParams();
   // console.log(id);
 
@@ -40,6 +41,10 @@ const Offer = ({ token }) => {
     };
   }, []);
 
+  const handleImageClick = () => {
+    setIsImageExpanded(!isImageExpanded);
+  };
+
   return isLoading ? (
     <div className="loader">
       <Loader color="#017580" height={80} width={80} />
@@ -52,7 +57,8 @@ const Offer = ({ token }) => {
           <img
             src={data.product_image.secure_url}
             alt="clothe"
-            className="offer-image"
+            className={`offer-image ${isImageExpanded ? "expanded" : ""}`}
+            onClick={handleImageClick}
           />
           <div className="offer-details">
             <p className="offer-price">{data.product_price} €</p>
